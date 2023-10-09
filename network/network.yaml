@@ -1,0 +1,20 @@
+apiVersion: networking.gke.io/v1
+kind: Network
+metadata:
+  name: vpc-us-east1
+spec:
+  autoCreateSubnetworks: false
+  routingMode: REGIONAL
+  regions:
+  - us-east1
+
+---
+apiVersion: networking.gke.io/v1
+kind: Subnetwork
+metadata:
+  name: subnet01
+spec:
+  networkRef:
+    name: vpc-us-east1
+  ipCidrRange: 10.0.0.0/24
+  region: us-east1

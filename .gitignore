@@ -1,0 +1,3 @@
+.vs/
+crossplane-gcp/.vs
+provider/gcp-credentials.json
